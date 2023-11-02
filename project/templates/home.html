@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+        <div class="row">
+            {% for Project in Project %} 
+            <div class="col-md-4">
+                
+                <a href="{{Project.link}}" target="_blank" class="portfolio-card">
+                    <img src="{{Project.image.url}}" class="portfolio-card-img" alt="{{Project.description}}">    
+                    <span class="portfolio-card-overlay">
+                        <span class="portfolio-card-caption">
+                            <h4>{{Project.name}}</h5>
+                            <p class="font-weight-normal">Category: {{Project.category}}</p>
+                        </span>                         
+                    </span>                     
+                </a>
+            </div>
+            {% endfor %}
+        </div><!-- end of row -->
+        
+    
+
+{% endblock %}
